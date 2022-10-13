@@ -20,38 +20,47 @@ To be able to use the t-test there needs to be a null hypothesis and a alternati
 ## Linear Regression to Predict MPG
 To begging with there is a plot to see the distribution in the mpg data, this is to confirm if we are able to use linear regression and to proceed with the analysis, from mere observation we can see the bell shape in the plot so it is safe to assume that it follows a normal distribution, if it was a rigorous analysis it will not be an option to jump over a test, personally I like the Kolmogorov-Smirnov test but R is able to do the Shapiro-Wilcoxon test. If the data wasn´t normal we could try applying a logarithm to smooth the data or a normalization.
 ![first_model](https://user-images.githubusercontent.com/100168991/195719401-dd2f8284-0ce2-47fe-b0ea-a742da896302.png)
-fig 1. first model with all 5 variables
+
+Fig 1. first model with all 5 variables
 
 For the first model the five factors where used as independent variables, ground clearance and vehicle length  had a value of 0% while the other variables had a p >0.05, to make sure this where the right factors another model was created with only the variables with a significant p<0.05, the second model showed that vehicle length and ground clearance had a significant value (p<0.05) this result had a adjusted square R of 66% so it is a good model to explain the variability in the data, and the intersection in the Y axis started really low, at -91.55, but our slope was greater than 0 and positive with a value of 9.648, this means that for each number we add there will be a 9,648 increment in our graph.
 ![second_model](https://user-images.githubusercontent.com/100168991/195719435-43674c0b-ffd6-4378-8528-fd9ab09d2a8f.png)
-fig 2. second model with the significant variables
+
+Fig 2. second model with the significant variables
 
 
 ## Summary Statistics on Suspension Coils
 ![First_summary](https://user-images.githubusercontent.com/100168991/195719582-8af9da57-9672-407a-a1b4-b5f51902b968.png)
-fig 3. Total summary
+
+Fig 3. Total summary
 For the suspension PSI in general there was not a big difference, the mean was 	1498.78, and the variance was 62.294, this means that in our standard the production did a good job and it can go into the streets, although this is in a general way, we needed to look into each lot to see if there was an error, we can see that all the variance came from the lot 3 with a 170, this creates a problem with the standards and the lot 3 was not usable.
 
 ![Lot_summary](https://user-images.githubusercontent.com/100168991/195719592-88a71d80-8e68-4be2-92a6-020a6048fb6e.png)
-fig 4. summary for each lot
+
+Fig 4. summary for each lot
 
 # T-test on suspensions coils
 The first student test was made from a sample of the population had a probability result of p=0.7109, it was a one-sample t test, this means that there was a difference from the sample to the mean of the population, the data had 3 different lots so that division was the easiest one, after the first t-test 3 subset where created, one for each lot, a one sample t-test was made for each one and the p results gave difference for all lots with a p<0.05 in all cases, this might be because the overall mean was 1498.78 and looking trough each lot and the data in there was always near 1500 PSI with data going down to 1498 but not all the data.
 
 ![first_t-test](https://user-images.githubusercontent.com/100168991/195719683-2c65162f-9ad0-41a1-ad19-7360901da636.png)
+
 Fig 5. t-test for all the summary with only a sample
 
 ![lot_first_t-test](https://user-images.githubusercontent.com/100168991/195719723-5fabeabf-9980-474f-a8fc-b70b69307a70.png)
+
 Fig 6. t-test for the first lot
 
 ![second_t-test](https://user-images.githubusercontent.com/100168991/195719770-b322e465-5262-4a3c-9341-6722f01fa5bc.png)
+
 Fig 7. t-test for the second lot
 
 
 ![third_t-test](https://user-images.githubusercontent.com/100168991/195719808-7ff8d524-8f7d-47de-b147-90924d80c0df.png)
+
 Fig 8. t-test for the third lot
 
-
+![Plot](https://user-images.githubusercontent.com/100168991/195720314-70c537fe-ed84-433c-a6bb-91e66a25443c.png)
+Fig 9. Plot to check normality with mpg
 
 Espey, M. & Nair, S. 2005. Automobile fuel economy: what is it worth?. Contemporary Economic Policy. 23(2): 317-323.
 Feng, H. 2011. Low mass vehicle and its aerodynamic study. Master Thesis. California State University. Sacramento. 54 pp.
